@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔧 Tech Debt / Refactor 가이드
+    url: https://your.wiki/refactor-guidelines
+    about: 레이어드 아키텍처, 네이밍 규칙, 테스트 기준 등 내부 가이드를 먼저 확인하세요.
