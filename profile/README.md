@@ -15,7 +15,7 @@ AI 기반 개인 운동 코치 앱, **FitBuddy**에 오신 것을 환영합니�
 ---
 
 ## 📂 리포지토리
-- `fitbuddy-android` : Android (Kotlin + Jetpack Compose)
+- `fitbuddy-android` : Android (Kotlin + xml)
 - `fitbuddy-server` : Backend (Node.js + Express + PostgreSQL)
 
 ---
