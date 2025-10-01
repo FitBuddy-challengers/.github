@@ -1,0 +1,133 @@
+name: "Home screen code refactoring"
+description: "Open Parent: Code refactoring @ugmin1030 — 홈 화면 리팩터링 작업 이슈 템플릿"
+title: "Home: Refactor - <짧은 요약을 여기에>"
+labels:
+  - refactor
+  - home-screen
+assignees:
+  - ugmin1030
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🧹 Home screen code refactoring
+        Open Parent: **Code refactoring** · 담당: **@ugmin1030**
+
+  - type: input
+    id: parent
+    attributes:
+      label: Open Parent
+      description: 상위(부모) 이슈 또는 에픽 번호를 적어주세요.
+      placeholder: "#43"
+    validations:
+      required: false
+
+  - type: input
+    id: related
+    attributes:
+      label: Related Issues
+      description: 관련 이슈 번호(선택).
+      placeholder: "#12, #28"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ✨ Description
+      description: 작업 배경/목적과 현재 문제점을 명확히 적어주세요.
+      placeholder: |
+        - 현재 Home 화면에서 ...
+        - 리팩터링 목표: 성능/가독성/테스트 용이성 향상 등
+    validations:
+      required: true
+
+  - type: textarea
+    id: implement
+    attributes:
+      label: ⚙️ What to do (To implement the function)
+      description: 구현(변경)할 함수/모듈/컴포넌트를 구체적으로 적어주세요.
+      placeholder: |
+        - ViewModel 분리: HomeViewModel → HomeUiState/Action 정리
+        - UseCase 도입: GetHomeFeedUseCase, GetUserBadgeUseCase
+        - 의존성 주입(Hilt) 정리: @Module @Binds ...
+        - Compose 리컴포지션 최적화: state hoisting, remember, derivedStateOf
+        - 네이밍 규칙 통일: snake_case → camelCase, 파일/패키지 구조 재정렬
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: ✅ Things to do (Checklist)
+      description: 체크리스트 형식으로 작성하세요. 항목은 자유롭게 수정/추가하세요.
+      value: |
+        - [ ] 기존 코드 구조 파악 및 다이어그램 초안
+        - [ ] ViewModel/UseCase/Repository 경계 정의
+        - [ ] 불필요한 재조합(recomposition) 포인트 제거
+        - [ ] 새 구조 단위테스트 작성 (VM, UseCase)
+        - [ ] UI 스냅샷 테스트(필요 시)
+        - [ ] 성능 측정 전/후 로그(프레임 드랍, 렌더 타임)
+        - [ ] 문서화(폴더 구조, 의존 흐름, 네이밍 컨벤션)
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 📆 Deadline
+      description: 마감 기한(선택). 형식 예) 2025-10-07
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - Blocker
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+      default: 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 🎯 Acceptance Criteria
+      description: 완료 정의(DoD)를 체크리스트로 작성하세요.
+      value: |
+        - [ ] Home 화면 진입 시 프레임 드랍(>16ms) 기준 N% 이상 감소
+        - [ ] 신규 구조에서 동일 기능 E2E 동작 확인
+        - [ ] 단위테스트 커버리지 X% 이상
+        - [ ] 코드 오너십/문서화 반영 완료
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk
+    attributes:
+      label: ⚠️ Risk & Rollback Plan
+      description: 잠재 리스크와 롤백 방법을 간단히 적어주세요.
+      placeholder: |
+        - 리스크: ...
+        - 모니터링 지표: ...
+        - 롤백: 기존 태그 vX.Y로 재배포, feature flag 비활성화
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📎 Additional Notes
+      description: 참고 링크, 스크린샷, 로그 등 추가 자료.
+      placeholder: |
+        - 디자인/피그마 링크:
+        - 관련 PR/브랜치:
+        - 성능 측정 자료:
+    validations:
+      required: false
